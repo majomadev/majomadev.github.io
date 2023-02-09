@@ -1,0 +1,147 @@
+* {
+    /* --color-principal: #24527b;
+    --color-boton: #ceb233;
+    --color-boton-off: #74641e; */
+    --color-fuente: #ffffff;
+
+    --paleta1: #e9e0d1;
+    --paleta2: #91a398;
+    --paleta3: #33605a;
+    --paleta4: #070001;
+    --paleta5: #68462b;
+
+    font-family: 'Open Sans', sans-serif;
+    color: var(--color-fuente);
+}
+
+ /* The animation code */
+ @keyframes opacidadAnim {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  @keyframes opacidadAnimOff {
+    from {opacity: 1;}
+    to {opacity: 0;}
+  }
+
+html {
+    height: fit-content;
+}
+
+body {
+    background-color: var(--paleta5);
+}
+
+.titulo {
+    padding: 2.5%;
+    background-color: var(--paleta5);
+    border-radius: 20px;
+    text-align: center;
+    margin: 30px;
+}
+
+#encabezado {
+    margin: auto;
+    width: 80%;
+    padding: 2em;
+    text-align: center;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    margin-bottom: 20px;
+}
+
+#foto-perfil {
+    object-fit: cover;
+    object-position: 10% 5%;
+    transform: rotate(-1deg);
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    border-width: 0.5em;
+    border-style: solid;
+    border-color: var(--color-fuente);
+}
+
+.contenedor {
+    margin: auto;
+    margin-top: 10px;
+    display: none;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    width: 80%;
+    background-color: #ffffff20;
+}
+
+.datos {
+    text-align: center;
+}
+
+#portfolio-hide {
+    display: none;
+}
+
+#col-1 {
+    display: none;
+    margin: auto;
+    padding: 1vh;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    color: var(--color-fuente);
+    background-color: var(--paleta5);
+    animation-name: opacidadAnim;
+    animation-duration: 0.5s;
+}
+
+#col-1 p {
+    text-align: center;
+}
+
+.foto-over {
+    position: relative;
+}
+
+#menu ul {
+    list-style: none;
+    display: flex;
+}
+
+#menu li {
+    margin: auto;
+    /* background-color: var(--color-boton); */
+    padding: 10px;
+}
+
+
+/*
+#menu li:hover {
+     background-color: var(--color-boton-off);
+}
+*/
+
+#menu {
+    position: sticky;
+    bottom: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-fuente);
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--color-boton);
+}
+
+
+.list-group-item {
+    background-color: var(--color-principal);
+}
+
+.contenido {
+    margin: 5%;
+}
