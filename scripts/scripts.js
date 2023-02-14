@@ -4,21 +4,25 @@ isHabi = false;
 isExp = false;
 isDatos = false;
 duracionAnim = 500;
-//col-1
+
+//--------------------------------
+
 document.getElementById('mostrarInfo').onclick = function () {
     if (!isInfo) {
         document.getElementById('col-1').style.animationName = "opacidadAnim";
         document.getElementById('col-1').style.animationDuration = "0.5s";
         document.getElementById('col-1').style.display = "block";
         isInfo = true;
-    } else {        
+    } else {
         isInfo = false;
         document.getElementById('col-1').style.animationName = "opacidadAnimOff";
         document.getElementById('col-1').style.animationDuration = "0.5s";
         setTimeout(() => {
             document.getElementById('col-1').style.display = "none";
         }, duracionAnim);
-    }   
+    }
+
+    document.getElementById('mostrarInfo').focus();
 }
 
 document.getElementById('clicDatos').onclick = function () {
@@ -27,7 +31,8 @@ document.getElementById('clicDatos').onclick = function () {
         document.getElementById('datos-personales').style.animationDuration = "0.5s";
         document.getElementById('datos-personales').style.display = "block";
         isDatos = true;
-    } else {        
+        document.getElementById('datos-personales').focus();
+    } else {
         isDatos = false;
         document.getElementById('datos-personales').style.animationName = "opacidadAnimOff";
         document.getElementById('datos-personales').style.animationDuration = "0.5s";
@@ -43,15 +48,15 @@ document.getElementById('clicExp').onclick = function () {
         document.getElementById('experiencia-laboral').style.animationDuration = "0.5s";
         document.getElementById('experiencia-laboral').style.display = "block";
         isExp = true;
+        document.getElementById('experiencia-laboral').focus();
     } else {
-        
+
         isExp = false;
         document.getElementById('experiencia-laboral').style.animationName = "opacidadAnimOff";
         document.getElementById('experiencia-laboral').style.animationDuration = "0.5s";
         setTimeout(() => {
             document.getElementById('experiencia-laboral').style.display = "none";
         }, duracionAnim);
-
     }
 }
 
@@ -61,10 +66,9 @@ document.getElementById('clicHabi').onclick = function () {
         document.getElementById('habilidades').style.animationDuration = "0.5s";
         document.getElementById('habilidades').style.display = "block";
         isHabi = true;
+        document.getElementById('habilidades').focus();
     } else {
-
         isHabi = false;
-
         document.getElementById('habilidades').style.animationName = "opacidadAnimOff";
         document.getElementById('habilidades').style.animationDuration = "0.5s";
         setTimeout(() => {
